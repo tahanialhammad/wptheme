@@ -1,5 +1,5 @@
-The Category and Blog page template 
 <?php get_header(); ?>
+The Category and Blog page template 
 
 <div class="container">
     <h1><?= single_cat_title(); ?></h1>

@@ -1,1 +1,65 @@
-body{background-color: bisque;}
+header, footer{
+    background-color:black;
+}
+
+/* Basic CSS style befoor using Bootstrap */
+header .main-menu,
+footer .footer-menu
+{
+    list-style-type: none;
+    display: flex;
+}
+header .container,
+footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+header .main-menu li{position: relative;}
+header .main-menu li a,
+footer .footer-menu li a{
+color: white;
+padding: .5rem 1rem;
+text-decoration: none;
+}
+/* Later i must do justify between */
+header .main-menu li:first-child a{padding-left: 0;}
+header .main-menu li:last-child a{padding-right: 0;}
+
+header .main-menu li .sub-menu{
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    box-shadow:1px 1px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    border-radius: .5rem;
+}
+
+header .main-menu li .sub-menu a{
+    color: black;
+    padding: .25rem;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+header .main-menu li .sub-menu a:hover{color: red;}
+
+header .main-menu >.menu-item-has-children:hover > .sub-menu{
+    display: block;
+}
+header .main-menu .menu-item-has-children .sub-menu >.menu-item-has-children:hover > .sub-menu{
+    display: block;
+}
+
+/*Second level from Submenu*/
+header .main-menu .sub-menu li .sub-menu{
+    left: 100%;
+    top: 0;
+}

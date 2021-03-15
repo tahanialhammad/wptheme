@@ -13,9 +13,11 @@
     <header>
         Header
         <div class="container">
-        <h1>Logo</h1>
-            <nav>
-                <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
-            </nav>
+        <nav>  
+            <?php wp_nav_menu(array(
+            'theme_location'=>'main-menu',
+            'menu_class'=>'main-menu'
+            )); ?>
+        </nav>
         </div>
     </header>
