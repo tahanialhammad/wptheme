@@ -1,1 +1,1 @@
-home
+The index page

@@ -1,6 +1,5 @@
-This is the sigle post template
 <?php get_header(); ?>
-
+This is the sigle post template
 <section>
     <div class="container">
 
@@ -8,7 +7,6 @@ This is the sigle post template
          <img src="<?php the_post_thumbnail_url('blog-large'); ?>" alt="<?php the_title(); ?>"
          class="img-fluid mb-3 img-thumbnail">
         <?php endif; ?>
-
 
         <h1><?php the_title(); ?></h1>
         <?php get_template_part('includes/section', 'blogcontent') ?>
