@@ -1,4 +1,4 @@
-The defult Blog page template 
+The Category and Blog page template 
 <?php get_header(); ?>
 
 <div class="container">
