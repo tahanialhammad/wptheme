@@ -65,8 +65,7 @@ function my_first_post_type()
         'public' => true,
         'has_archive' => true,
         'menu_icon' => 'dashicons-images-alt2',
-        'supports' => array('title', 'editor', 'thumbnail'),
-        // 'rewrite' =>array('slug'=>'cars')
+        'supports' => array('title', 'editor', 'thumbnail')
     );
     register_post_type( 'cars', $args );
 }
