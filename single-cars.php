@@ -15,7 +15,18 @@ The single-cars template
                 <?php wp_link_pages(); ?>
             </div>
             <div class="col-lg-6">
-                info
+            <h3>info from extra fields</h3><hr>
+                <!-- <ul>
+                    <li>Color: <?= get_post_meta( $post->ID, 'Color', true )?></li>
+
+                    <?php if(get_post_meta( $post->ID, 'Registration', true )):?>
+                    <li>Registration : <?= get_post_meta( $post->ID, 'Registration', true )?></li>
+                    <?php endif; ?> 
+                </ul>  -->
+                <ul>
+                    <li>Color: <?php the_field('color'); ?></li>
+                    <li>Registration :  <?php the_field('registration'); ?></li>
+                </ul>
             </div>
         </div>
 
