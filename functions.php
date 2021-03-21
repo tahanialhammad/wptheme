@@ -52,6 +52,42 @@ function my_sidebars()
 }
 add_action( 'widgets_init', 'my_sidebars');
 
+//Register Footer
+function my_footer()
+{
+    register_sidebar(
+        array(
+            "name" => "Footer 1",
+            "id" => "footer1",
+            "befor_widget" => "<div>",
+            "after_widget" => "</div>",
+            "befor_title" => "<h3>",
+            "after_title" => "</h3>",
+        )
+    );
+    register_sidebar(
+        array(
+            "name" => "Footer 2",
+            "id" => "footer2",
+            "befor_widget" => "<div>",
+            "after_widget" => "</div>",
+            "befor_title" => "<h3>",
+            "after_title" => "</h3>",
+        )
+    );
+    register_sidebar(
+        array(
+            "name" => "Footer 3",
+            "id" => "footer3",
+            "befor_widget" => "<div>",
+            "after_widget" => "</div>",
+            "befor_title" => "<h3>",
+            "after_title" => "</h3>"
+        )
+    );
+}
+add_action('widgets_init', 'my_footer');
+
 
 //Custom Post Types
 function my_first_post_type()
