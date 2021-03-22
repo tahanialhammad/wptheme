@@ -59,8 +59,6 @@ function my_footer()
         array(
             "name" => "Footer 1",
             "id" => "footer1",
-            "befor_widget" => "<div>",
-            "after_widget" => "</div>",
             "befor_title" => "<h3>",
             "after_title" => "</h3>",
         )
@@ -69,8 +67,6 @@ function my_footer()
         array(
             "name" => "Footer 2",
             "id" => "footer2",
-            "befor_widget" => "<div>",
-            "after_widget" => "</div>",
             "befor_title" => "<h3>",
             "after_title" => "</h3>",
         )
@@ -79,8 +75,6 @@ function my_footer()
         array(
             "name" => "Footer 3",
             "id" => "footer3",
-            "befor_widget" => "<div>",
-            "after_widget" => "</div>",
             "befor_title" => "<h3>",
             "after_title" => "</h3>"
         )
