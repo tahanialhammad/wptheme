@@ -6,9 +6,10 @@
                      class="img-fluid mb-3 img-thumbnail mr-4">
                 <?php endif; ?>
                 <div>
-                    <h3><?php the_title(); ?></h3>
+                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     <p><?php the_excerpt(); ?></p>
                     <a href="<?php the_permalink(); ?>" class="btn btn-primary">Read more <i class="fas fa-arrow-right"></i> </a>
+                    <p><?php comments_number(); ?></p>
                 </div>
             </div>
         </div>
