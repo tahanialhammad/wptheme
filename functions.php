@@ -1,5 +1,5 @@
 <?php 
-//Load stylesheet
+/* Load stylesheet */
 function load_css()
 {
     $version= wp_get_theme()->get('version');
@@ -10,7 +10,7 @@ function load_css()
 };
 add_action('wp_enqueue_scripts', 'load_css');
 
-//Load Javascript
+/* Load Javascript */
 function load_js()
 {
     wp_enqueue_script("bootstrap1_js", "https://code.jquery.com/jquery-3.2.1.slim.min.js", array(), true, "all");
@@ -22,26 +22,26 @@ function load_js()
 };
 add_action('wp_enqueue_scripts', 'load_js');
 
-//Theme options
+/* Theme options */
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
 add_theme_support('widgets');
 add_theme_support('title-tag');
 add_theme_support('custom-logo');
 
-//Menus
+/* Menus */
 register_nav_menus(array(
     'main-menu'=>"Main-menu",
     'footer-menu'=>"Footer-menu",
 ));
 
 
-//Custom  images size
+/* Custom  images size */
 add_image_size( 'blog-large', 800, 400, false );
 add_image_size( 'blog-small', 300, 200, true );
 
 
-//Register Sidebars
+/* Register Sidebars */
 function my_sidebars()
 {
     register_sidebar(
@@ -63,7 +63,7 @@ function my_sidebars()
 }
 add_action( 'widgets_init', 'my_sidebars');
 
-//Register Footer
+/* Register Footer */
 function my_footer()
 {
     register_sidebar(
@@ -94,23 +94,7 @@ function my_footer()
 add_action('widgets_init', 'my_footer');
 
 
-//Custom Post Types
-// function my_first_post_type()
-// {
-//     $args= array(
-//         'labels' => array(
-//             'name' => 'Cars',
-//             'singular_name' => 'car'
-//         ),
-//         'hierarchical' => true,
-//         'public' => true,
-//         'has_archive' => true,
-//         'menu_icon' => 'dashicons-images-alt2',
-//         'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
-//     );
-//     register_post_type( 'cars', $args );
-// }
-// add_action('init', 'my_first_post_type');
+/* Custom Post Types */
 
 function my_projects_post_type()
 {
@@ -130,20 +114,7 @@ function my_projects_post_type()
 add_action('init', 'my_projects_post_type');
 
 
-//Taxonomy
-// function my_first_taxonomy()
-// {
-//     $args= array(
-//         'labels' => array(
-//             'name' => 'Brands',
-//             'singular_name' => 'Brand'
-//         ),
-//         'public' => true,
-//         'hierarchical' => true,
-//     );
-//     register_taxonomy( 'brands', array('cars'), $args );
-// }
-// add_action('init', 'my_first_taxonomy');
+/* Taxonomy */
 
 function my_projects_taxonomy()
 {
