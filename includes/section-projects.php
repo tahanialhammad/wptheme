@@ -1,4 +1,4 @@
-<!--single car post content-->
+<!--single projects post content-->
 <?php if(have_posts()):while(have_posts()):the_post(); ?>
 <!-- this is a single page template  -->
 
