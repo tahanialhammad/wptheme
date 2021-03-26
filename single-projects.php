@@ -10,7 +10,7 @@ The single-cars template
 
         <div class="row">
             <div class="col-lg-6">
-                <?php get_template_part('includes/section', 'cars') ?>
+                <?php get_template_part('includes/section', 'projects') ?>
                 <!-- post block -->
                 <?php wp_link_pages(); ?>
             </div>
@@ -23,10 +23,10 @@ The single-cars template
                     <li>Registration : <?= get_post_meta( $post->ID, 'Registration', true )?></li>
                     <?php endif; ?> 
                 </ul>  -->
-                <ul>
+                <!-- <ul>
                     <li>Color: <?php the_field('color'); ?></li>
                     <li>Registration :  <?php the_field('registration'); ?></li>
-                </ul>
+                </ul> -->
             </div>
         </div>
 
