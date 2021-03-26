@@ -95,38 +95,69 @@ add_action('widgets_init', 'my_footer');
 
 
 //Custom Post Types
-function my_first_post_type()
+// function my_first_post_type()
+// {
+//     $args= array(
+//         'labels' => array(
+//             'name' => 'Cars',
+//             'singular_name' => 'car'
+//         ),
+//         'hierarchical' => true,
+//         'public' => true,
+//         'has_archive' => true,
+//         'menu_icon' => 'dashicons-images-alt2',
+//         'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
+//     );
+//     register_post_type( 'cars', $args );
+// }
+// add_action('init', 'my_first_post_type');
+
+function my_projects_post_type()
 {
     $args= array(
         'labels' => array(
-            'name' => 'Cars',
-            'singular_name' => 'car'
+            'name' => 'Projects',
+            'singular_name' => 'Project'
         ),
         'hierarchical' => true,
         'public' => true,
         'has_archive' => true,
         'menu_icon' => 'dashicons-images-alt2',
-        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
     );
-    register_post_type( 'cars', $args );
+    register_post_type( 'projects', $args );
 }
-add_action('init', 'my_first_post_type');
+add_action('init', 'my_projects_post_type');
 
 
 //Taxonomy
-function my_first_taxonomy()
+// function my_first_taxonomy()
+// {
+//     $args= array(
+//         'labels' => array(
+//             'name' => 'Brands',
+//             'singular_name' => 'Brand'
+//         ),
+//         'public' => true,
+//         'hierarchical' => true,
+//     );
+//     register_taxonomy( 'brands', array('cars'), $args );
+// }
+// add_action('init', 'my_first_taxonomy');
+
+function my_projects_taxonomy()
 {
     $args= array(
         'labels' => array(
-            'name' => 'Brands',
-            'singular_name' => 'Brand'
+            'name' => 'Topics',
+            'singular_name' => 'Topic'
         ),
         'public' => true,
         'hierarchical' => true,
     );
-    register_taxonomy( 'brands', array('cars'), $args );
+    register_taxonomy( 'topics', array('projects'), $args );
 }
-add_action('init', 'my_first_taxonomy');
+add_action('init', 'my_projects_taxonomy');
 
 /* Register Custom Navigation Walker */
 function register_navwalker(){
