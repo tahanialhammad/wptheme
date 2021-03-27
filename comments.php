@@ -1,36 +1,36 @@
 <div>
-<h2><?php if(!have_comments()){
-    echo "Leave a comment"; 
-    } else {
-        echo get_comments_number()." Comments"; 
+    <h3><?php if (!have_comments()) {
+            echo "Leave a comment";
+        } else {
+            echo get_comments_number() . " Comments";
         };
-    ?></h2>
+        ?></h3>
 </div>
-
 <div>
-<?php
-     wp_list_comments(
-         array(
-            'avatar_size'=> 80,
-            'style'=>'dev'
-         )
-     );
-?>
-</div>
-
-<div>
-<?php
-    if(comments_open()){
+    <?php
+    if (comments_open()) {
         comment_form(
             array(
-                'class_form'=>'',
+                'class_form' => '',
                 'title_reply_before' => '<h3 class="" >',
                 'title_reply_after' => '</h3>',
             )
         );
     };
-?>
+    ?>
 </div>
+<div>
+    <?php
+    wp_list_comments(
+        array(
+            'avatar_size' => 50,
+            'style' => 'dev'
+        )
+    );
+    ?>
+</div>
+
+
 <?php
 // if ( post_password_required()) return;
 // if(!comments_open()&& get_comments_number()&& post_type_supports(get_post_type(),'comments')){echo "<center><h3>mag niet comment</h3></center>";

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 The index template
 
-<section class="page-wrap">
+<section>
     <div class="container">
         <section class="row">
 

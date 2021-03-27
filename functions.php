@@ -48,16 +48,20 @@ function my_sidebars()
         array(
             'name'=>'Page Sidebar',
             'id'=>'page-sidebar',
-            'before_title'=>'<h4 class="weidgets-title">',
-            'after_title'=>'</h4>'
+            'before_title'=>'<h4 class="text-uppercase">',
+            'after_title'=>'</h4>',
+            'before_widget' => '<div class="mt-2 border-bottom">',
+            'after_widget' =>'</div>',
         )
     );
     register_sidebar(
         array(
             'name'=>'Blog Sidebar',
             'id'=>'blog-sidebar',
-            'before_title'=>'<h4 class="weidgets-title">',
-            'after_title'=>'</h4>'
+            'before_title'=>'<h4 class="text-uppercase">',
+            'after_title'=>'</h4>',
+            'before_widget' => '<div class="mt-2 border-bottom">',
+            'after_widget' =>'</div>',
         )
     );
 }
@@ -70,24 +74,30 @@ function my_footer()
         array(
             "name" => "Footer 1",
             "id" => "footer1",
-            "befor_title" => "<h3>",
-            "after_title" => "</h3>",
+            "befor_title" => '<h3 class="text-uppercase">',
+            "after_title" => '</h3>',
+            'before_widget' => '<div>',
+            'after_widget' =>'</div>',
         )
     );
     register_sidebar(
         array(
             "name" => "Footer 2",
             "id" => "footer2",
-            "befor_title" => "<h3>",
-            "after_title" => "</h3>",
+            "befor_title" => '<h3 class="text-uppercase">',
+            "after_title" => '</h3>',
+            'before_widget' => '<div>',
+            'after_widget' =>'</div>',
         )
     );
     register_sidebar(
         array(
             "name" => "Footer 3",
             "id" => "footer3",
-            "befor_title" => "<h3>",
-            "after_title" => "</h3>"
+            "befor_title" => '<h3 class="text-uppercase">',
+            "after_title" => '</h3>',
+            'before_widget' => '<div>',
+            'after_widget' =>'</div>',
         )
     );
 }
