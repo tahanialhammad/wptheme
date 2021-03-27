@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-This is the sigle post template
+This is the single post template
 <section>
     <div class="container">
 

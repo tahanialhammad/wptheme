@@ -48,16 +48,20 @@ function my_sidebars()
         array(
             'name'=>'Page Sidebar',
             'id'=>'page-sidebar',
-            'before_title'=>'<h4 class="weidgets-title">',
-            'after_title'=>'</h4>'
+            'before_title'=>'<h4 class="text-uppercase">',
+            'after_title'=>'</h4>',
+            'before_widget' => '<div class="mt-2 border-bottom">',
+            'after_widget' =>'</div>',
         )
     );
     register_sidebar(
         array(
             'name'=>'Blog Sidebar',
             'id'=>'blog-sidebar',
-            'before_title'=>'<h4 class="weidgets-title">',
-            'after_title'=>'</h4>'
+            'before_title'=>'<h4 class="text-uppercase">',
+            'after_title'=>'</h4>',
+            'before_widget' => '<div class="mt-2 border-bottom">',
+            'after_widget' =>'</div>',
         )
     );
 }
@@ -70,24 +74,30 @@ function my_footer()
         array(
             "name" => "Footer 1",
             "id" => "footer1",
-            "befor_title" => "<h3>",
-            "after_title" => "</h3>",
+            "befor_title" => '<h3 class="text-uppercase">',
+            "after_title" => '</h3>',
+            'before_widget' => '<div>',
+            'after_widget' =>'</div>',
         )
     );
     register_sidebar(
         array(
             "name" => "Footer 2",
             "id" => "footer2",
-            "befor_title" => "<h3>",
-            "after_title" => "</h3>",
+            "befor_title" => '<h3 class="text-uppercase">',
+            "after_title" => '</h3>',
+            'before_widget' => '<div>',
+            'after_widget' =>'</div>',
         )
     );
     register_sidebar(
         array(
             "name" => "Footer 3",
             "id" => "footer3",
-            "befor_title" => "<h3>",
-            "after_title" => "</h3>"
+            "befor_title" => '<h3 class="text-uppercase">',
+            "after_title" => '</h3>',
+            'before_widget' => '<div>',
+            'after_widget' =>'</div>',
         )
     );
 }
@@ -130,8 +140,18 @@ function my_projects_taxonomy()
 }
 add_action('init', 'my_projects_taxonomy');
 
-/* Register Custom Navigation Walker */
-function register_navwalker(){
-	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+/* Register Bootstrap Navigation Walker */
+require_once('class-wp-bootstrap-navwalker.php');
+
+function my_bootstrap_navbar(){
+    wp_nav_menu(array(
+        'theme_location'    => 'main-menu',
+        'depth'             => 2,
+        'container'         => false,
+        // 'container_class'   => 'collapse navbar-collapse',
+        // 'container_id'      => 'bs-example-navbar-collapse-1',
+        'menu_class'        => 'nav navbar-nav ml-auto',
+        // 'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+        'walker'            => new WP_Bootstrap_Navwalker(),
+    ));
 }
-add_action( 'after_setup_theme', 'register_navwalker' );
