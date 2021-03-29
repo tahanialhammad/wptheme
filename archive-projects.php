@@ -1,7 +1,7 @@
 <!-- cars category part  -->
 <?php get_header(); ?>
 The custem srachive template for post type projects 
-<section class="page-wrap">
+<section>
     <div class="container">
         <section class="row">
 
