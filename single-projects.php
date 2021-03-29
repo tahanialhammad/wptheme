@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 The single-project template
-<section class="page-wrap">
+<section>
     <div class="container">
         <h1><?php the_title(); ?></h1>
         <!-- this has a featured image -->

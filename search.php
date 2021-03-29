@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 The Search Template
-<section class="page-wrap">
+<section>
     <div class="container">
         <h1>Search Resultes for '<?php echo get_search_query(); ?>':</h1>
 

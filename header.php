@@ -21,6 +21,7 @@
     ?>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,6 +31,7 @@
                 <?php my_bootstrap_navbar(); ?>
                 <?php get_search_form(); ?>
             </div>
+        </div>
         </nav>
     </header>
-    <main class="container my-4">
+    <main class="my-4">

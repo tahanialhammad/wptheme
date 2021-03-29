@@ -2,7 +2,8 @@
     <div class="card mb-3">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <?php the_post_thumbnail('', ['class' => 'img-fluid']); ?>
+                <?php the_post_thumbnail('medium', ['class' => 'img-fluid']); ?>
+                <!-- <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="img-fluid"> -->
             </div>
             <div class="col-md-8">
                 <div class="card-body">
