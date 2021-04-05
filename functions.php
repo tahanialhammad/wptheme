@@ -155,3 +155,14 @@ function my_bootstrap_navbar(){
         'walker'            => new WP_Bootstrap_Navwalker(),
     ));
 }
+/* Custom excerpt length */
+function my_excerpt_length($length){
+    return 35;
+}
+add_filter( 'excerpt_length', 'my_excerpt_length');
+
+/*  Change the excerpt more string */
+function my_theme_excerpt_more( $more ) {
+    return '&hellip;';
+}
+add_filter( 'excerpt_more', 'my_theme_excerpt_more' );

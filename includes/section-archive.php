@@ -14,7 +14,12 @@
 
                     <p class="card-text"><?php the_excerpt(); ?></p>
                     <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-sm">Read more <i class="fas fa-arrow-right"></i> </a>
-                    <p class=" text-muted"><i class="fas fa-tag"></i> <?php the_category('| '); ?></p>
+                    <p class=" text-muted"><i class="fas fa-border-all"></i> <?php the_category('| '); ?></p>
+                    <p class=" text-muted">
+                    <?php if(has_tag()){?>
+                    <i class="fas fa-tag"></i> <?php the_tags('| '); ?>
+                    <?php }else {echo 'Tags: There is No Tags.';}?>
+                    </p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
