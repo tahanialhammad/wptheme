@@ -12,7 +12,7 @@
                     <span class=" text-muted"><i class="far fa-calendar-alt"></i><?= get_the_date(); ?>, </span>
                     <span class=" text-muted"><i class="far fa-comment"></i><?php comments_number(); ?>, </span>
 
-                    <p class="card-text"><?php the_excerpt(); ?></p>
+                    <div class="card-text"><?php the_excerpt(); ?></div>
                     <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-sm">Read more <i class="fas fa-arrow-right"></i> </a>
                     <p class=" text-muted"><i class="fas fa-border-all"></i> <?php the_category('| '); ?></p>
                     <p class=" text-muted">

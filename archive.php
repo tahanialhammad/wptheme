@@ -15,8 +15,10 @@ The default Blog page template
 
                 <?php get_template_part('includes/section', 'archive') ?>
 
-                <?php previous_posts_link(); ?>
-                <?php next_posts_link(); ?>
+                <div class="post-pagination text-center">
+                    <?php previous_posts_link(); ?>
+                    <?php next_posts_link(); ?>
+                </div>
             </div>
         </section>
     </div>
