@@ -15,9 +15,10 @@ The index template
                 <h1><?= single_cat_title(); ?></h1>
 
                 <?php get_template_part('includes/section', 'archive') ?>
-
-                <?php previous_posts_link(); ?>
-                <?php next_posts_link(); ?>
+                <div class="post-pagination text-center">
+                    <?php previous_posts_link(); ?>
+                    <?php next_posts_link(); ?>
+                </div>
             </div>
         </section>
     </div>

@@ -58,8 +58,16 @@ header .main-menu .menu-item-has-children .sub-menu >.menu-item-has-children:hov
     display: block;
 }
 
-/*Second level from Submenu*/
+/* Second level from Submenu */
 header .main-menu .sub-menu li .sub-menu{
     left: 100%;
     top: 0;
+}
+/*================*/
+/* post-pagination */
+.post-pagination a{
+    display: inline-block;
+    padding: 20px;
+    background-color: gray;
+    color: white;
 }
