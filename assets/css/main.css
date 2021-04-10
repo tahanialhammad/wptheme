@@ -68,6 +68,12 @@ header .main-menu .sub-menu li .sub-menu{
 .post-pagination a{
     display: inline-block;
     padding: 20px;
+    background-color: #e7e0e0;
+    color: white;
+    transition: all .4s ease-in-out;
+}
+.post-pagination a:hover{
     background-color: gray;
     color: white;
+    text-decoration: none;
 }
