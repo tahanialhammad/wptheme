@@ -26,9 +26,9 @@
 <!--Start Copyright-->
   <div class="copyright py-2 border-top">
     <div class="container">
-      <div class="row">
+      <div class="row container">
         <div class="col-sm-6 text-center text-sm-left">
-          <p><?php bloginfo('name'); ?> -&copy; <?php echo date('Y'); ?></p>
+        <p>Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
         </div>
 
         <div class="col-sm-6 text-center text-sm-right">
