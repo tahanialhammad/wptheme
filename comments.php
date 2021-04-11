@@ -24,8 +24,10 @@
         <?php
         wp_list_comments(
             array(
-                'avatar_size' => 50,
-                'style' => 'dev'
+                'max_depth'         => 3,
+                'type'              => 'comment',
+                'avatar_size'       => 50,
+                'reverse_top_level' => true
             )
         );
         ?>

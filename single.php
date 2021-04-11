@@ -9,9 +9,9 @@ This is the single post template
         <?php wp_link_pages(); ?>
         
          <!-- post-pagination -->
-        <div class="post-pagination">
-            <?php previous_post_link(); ?>
-            <?php next_post_link(); ?>
+         <div class="post-pagination">
+            <?php previous_post_link('%link', '<i class="fas fa-chevron-left"></i> %title'); ?>
+            <?php next_post_link('%link', '%title <i class="fas fa-chevron-right"></i>'); ?>
         </div>
     </div>
 </section>
