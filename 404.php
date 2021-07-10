@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 404 templat
-<section>
 <div class="container">
     <div class="row">
         <div class="col-md-8">
@@ -12,5 +11,4 @@
         </div>
     </div>
 </div>
-</section>
 <?php get_footer(); ?>

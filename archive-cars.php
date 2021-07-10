@@ -1,6 +1,6 @@
+<!-- cars category part  -->
 <?php get_header(); ?>
-The index template by copy code from archive.php 
-
+The custem srachive template for post type cars 
 <section class="page-wrap">
     <div class="container">
         <section class="row">
@@ -16,9 +16,8 @@ The index template by copy code from archive.php
 
                 <?php get_template_part('includes/section', 'archive') ?>
 
-                <!-- <?php previous_posts_link(); ?>
-                <?php next_posts_link(); ?> -->
-                <?php the_posts_pagination(); ?>
+                <?php previous_posts_link(); ?>
+                <?php next_posts_link(); ?>
             </div>
         </section>
     </div>
